@@ -1,5 +1,5 @@
 {
-  "name": "package",
+  "name": "init",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Kerby00/README-generator/issues"
   },
-  "homepage": "https://github.com/Kerby00/README-generator#readme"
+  "homepage": "https://github.com/Kerby00/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
