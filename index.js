@@ -49,13 +49,40 @@ const questions = [
 
 ];
 
+
+const readmetemplate = ({title, description, installation, usage, contribution, Liscense, Github, Email}) => 
+`# ${title}
+
+## Description:
+-${description}\n
+## Table of Content:d
+
+## Installation:
+-${installation}\n
+## Usage:
+-${usage}\n
+## Credits:
+-${contribution}\n
+## License: 
+-${Liscense}\n
+## Questions/Comments
+-${Github}\n
+-${Email}\n
+## Test`;
+
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(answers) { 
+    const READMENOW = readmetemplate(answers);
+    fs.writeFile('README.md', READMENOW, (err) =>
+    err ? console.log(err) : console.log())
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
+        .then(writeToFile)
 }
 
 // Function call to initialize app
