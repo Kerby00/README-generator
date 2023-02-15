@@ -1,7 +1,7 @@
-# na      ![my badge](https://badgen.net/badge/liscense/None/blue)
+# README Generator      ![my badge](https://badgen.net/badge/liscense/None/blue)
 
 ## Description:
--na
+-This application is a README Generator that generates an md file from the command line using prompts/inquirer. This application also displays a badge for the liscense and allows the user to easily create a markdown file for any application from their command line.
 
 ## Table of Content:
 -[Description](#description)
@@ -12,13 +12,13 @@
 -[Questions and Comments](#questions-and-comments)
 -[Test](#test)
 ## Installation:
--na
+-The user must have node and npm installed, along with inquirer and fs packages
 
 ## Usage:
--na
+-To generate a markdown file for an application/repo
 
 ## Credits:
--na
+-Benjamin Kerby
 
 ## License: 
 **Note**
@@ -26,11 +26,11 @@
 
 ## Questions and Comments
 Contact me:
-- Github:  na
+- Github:  Kerby00
 
-- Email:  na
+- Email:  Kerbster79@gmail.com
 
 ## Test
--na
+-open the command line and run node index.js
 
 -[Back to top](# )
