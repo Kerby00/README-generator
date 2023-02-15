@@ -32,7 +32,7 @@ const questions = [
         type: 'list',
         name: 'License',
         message: 'What kind of License for the Application?',
-        choices: ['None', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicensed'],
+        choices: ['None', 'GNU-AGPLv3', 'GNU-GPLv3', 'GNU-LGPLv3', 'Mozilla-Public-License-2.0', 'Apache-License-2.0', 'MIT-License', 'Boost-Software-License-1.0', 'The-Unlicensed'],
         default: 'None',
     },
     {
@@ -44,19 +44,27 @@ const questions = [
         type: 'input',
         name: 'Email',
         message: 'contact email:'
+    }, {
+        type: 'input',
+        name: 'Test',
+        message: 'Any test instructions you would like to include:'
     }
 
 
 ];
-
-
-const readmetemplate = ({title, description, installation, usage, contribution, Liscense, Github, Email}) => 
-`# ${title}
+const readmetemplate = ({ title, description, installation, usage, contribution, License, Github, Email, Test }) =>
+`# ${title}      !\[my badge\](https://badgen.net/badge/liscense/${License}/blue)
 
 ## Description:
 -${description}\n
-## Table of Content:d
-
+## Table of Content:
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Credits](#credits)
+-[License](#license)
+-[Questions and Comments](#questions-and-comments)
+-[Test](#test)
 ## Installation:
 -${installation}\n
 ## Usage:
@@ -64,18 +72,23 @@ const readmetemplate = ({title, description, installation, usage, contribution, 
 ## Credits:
 -${contribution}\n
 ## License: 
--${Liscense}\n
-## Questions/Comments
--${Github}\n
--${Email}\n
-## Test`;
+**Note**
+-This application is covered by "${License}" License\n
+## Questions and Comments
+Contact me:
+- Github:  ${Github}\n
+- Email:  ${Email}\n
+## Test
+-${Test}\n
+-[Back to top](# )`
+    ;
 
 
 // TODO: Create a function to write README file
-function writeToFile(answers) { 
+function writeToFile(answers) {
     const READMENOW = readmetemplate(answers);
     fs.writeFile('README.md', READMENOW, (err) =>
-    err ? console.log(err) : console.log())
+        err ? console.log(err) : console.log())
 }
 
 // TODO: Create a function to initialize app
